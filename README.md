@@ -22,7 +22,7 @@ tel:[phone_number]
 
 > In the phone number you can use +(plus) sign for international numbers. What’s also interesting to know is that this can even work on a desktop if you have an application like Skype installed. So maybe it’s a good idea to have this on the classic/desktop website too.
 
-### Later update from comments. 
+### Later update 
 Another interesting phone link will be how to call a teleconferencing phone number. There you call a phone number and then you enter your conference code, usually followed by hash(#). To do this from a link you will need a pause after the phone number and this is done with , (comma), usually entered by a long press on star(*). I tested this on Android and iOS and it works fine, but you usually need two pauses (,) between the phone number and conference code. Same way you can dial an extension line.
 
 Examples
