@@ -50,8 +50,21 @@ From a web page you can open the SMS sending application on the user phone with 
 ```
 sms:<phone_number>[,<phone_number>]*[?body=<message_body>]
 ```
-The link contains a comma separated list of phone numbers and an optional message body. The phone numbers are specified as in the call links. Detailed information you can find in the [URI Scheme for GSM Short Message Service](https://www.ietf.org/archive/id/draft-wilde-sms-uri-19.html)
+The link contains a comma separated list of phone numbers and an optional message body. The phone numbers are specified as in the call links. 
+Detailed information you can find in the [URI Scheme for GSM Short Message Service](https://www.ietf.org/archive/id/draft-wilde-sms-uri-19.html)
 
+URI base syntax is taken from RFC 3986 [RFC3986]
+```
+sms-uri        = scheme ":" sms-hier-part [ "?" sms-fields ]
+scheme         = "sms"
+sms-hier-part  = sms-recipient *( "," sms-recipient )
+sms-recipient  = telephone-subscriber ; defined in RFC 3966
+sms-fields     = sms-field *( "&" sms-field )
+sms-field      = sms-field-name "=" escaped-value
+sms-field-name = "body" / sms-field-ext ; "body" MUST only appear once
+sms-field-ext  = 1*( unreserved )
+escaped-value  = *( unreserved / pct-encoded ) ; defined in RFC 3986
+```
 Examples
 ```
 sms:12345678
